@@ -1,0 +1,886 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+    background: #000;
+}
+
+.VideoFondo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1000;
+}
+
+.VideoFondo video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+
+/*Navbar----------------------------*/
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    height: 100vh;
+    width: 20%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, width 0.3s ease, min-width .3s ease;
+    color: #000;
+    padding-top: 15px;
+    overflow: hidden;
+    border-right: 1px solid rgb(200, 200, 200);
+    z-index: 1000;
+    min-width: 263px;
+}
+
+.Icon-Navbar-Recogida-Compu{
+    width: 100%;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .5s ease, width .5s ease, height .5s ease;
+}
+
+.Icon-Navbar-Recogida-Compu img{
+    width: 35px;
+    height: 30px;
+}
+
+.navbarCompuRecogida .Icon-Navbar-Recogida-Compu{
+    display: flex;
+    opacity: 1;
+}
+
+.navbar-titulo{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #61626f;
+    margin-bottom: 30px;
+    flex-direction: column;
+}
+
+.navbar-titulo p{
+    font-size: 20px;
+}
+
+.LogoImbPc-Navabar{
+    width: 225px;
+    height: 85px;
+}
+
+.navbar-options{
+    padding: 0;
+}
+
+.navbar-option{
+    width: 100%;
+    height: 35px;
+    background: #fff;
+    border: none;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    display: flex;
+    ustify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    text-decoration6 none;
+    font-size: 17px;
+    transition: height 0.3s ease, font-size 1s ease, color 1s ease, opacity 0.5s ease, letter-spacing 0.7s ease;
+    text-decoration: none;
+}
+
+.navbar-option:hover{
+    background: rgb(240, 240, 240);
+    height: 50px;
+    font-size: 17.3px;
+    color: #000;
+    letter-spacing: 0.8px;
+}
+
+.navbar-option:hover img{
+    opacity: 1;
+}
+
+.navbar-option: hover .Navbar-mayorQueIcon{
+    transform: 1.2;
+}
+
+.Navbar-mayorQueIcon{
+    width: 12px;
+    height: 10px;
+    margin-right: 3px;
+    opacity: 0.5;
+}
+
+.Bievenida-Option-Icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+    opacity: 0.9;
+}
+
+.Actividades-Option-Icon{
+    width: 20px; 
+    height: 20px;
+    margin-right: 7px;
+    opacity: 0.9;
+}
+
+.Planificaciones-Option-Icon{
+    width: 20px;
+    height: 17px;
+    margin-right: 7px;
+    opacity: 0.9;
+}
+
+.campusVirtual-Option-Icon{
+    width: 20px;
+    height: 17px;
+    margin-right: 7px;
+    opacity: 0.9;
+}
+
+.Profesor-Option-Icon{
+    width: 20px;
+    height: 17px;
+    margin-right: 7px;
+    opacity: 0.9;
+}
+
+.navabr-Ocultar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: row-reverse;
+}
+
+.Navbar-Button-Ocultar:hover img{
+    width: 17px;
+    height: 17px;
+    opacity: 1;
+}
+
+.Navbar-Button-Ocultar{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+}
+
+.Navbar-icon-Ocultar{
+    width: 15px;
+    height: 15px;
+    opacity: 0.5;
+    transition: width .6s ease, height .6s ease, opacity .3s ease;
+    rotate: 180deg;
+}
+
+.navbarCompuRecogida {
+    width: 5%;
+    min-width: 65.75px;
+}
+
+.navbarCompuRecogida .navbar-titulo{
+    opacity: 0;
+    display: none;
+}
+
+.navbarCompuRecogida .navbar-options{
+    opacity:  0;
+    display: none;
+}
+
+.navbarCompuRecogida .navabr-Ocultar{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.navbarCompuRecogida .Navbar-Button-Ocultar{
+        margin: 0px;
+        margin-bottom:  30px;
+}
+
+.navbarCompuRecogida .Navbar-icon-Ocultar{
+    rotate: 0deg;
+}
+/*Navbar----------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ContenedorColegioIMBPC-----------*/
+.ContendorCentral-Info{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacionContenedorCentral-ProfPec{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20%;
+    transition: padding-left .3s ease;
+    flex-direction: row;
+}
+
+.ContenedorCentralAdaptable .informacionContenedorCentral-ProfPec{
+    padding-left: 5%;
+}
+
+.InfoProfePec{
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    padding: 50px 75px;
+    min-height: 55vh;
+}
+
+.adaptableTelefono .InfoProfePec{
+    padding: 25px 75px;
+}
+
+.FotoYNombreAcselPec{
+    height: 50vh;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.adaptableTelefono .FotoYNombreAcselPec{
+    padding: 0 20px;
+    height: 75vh;
+}
+
+.FotoProfePec{
+    width: 300px;
+    height: 221px;
+}
+
+.adaptableTelefono .FotoProfePec{
+    width: 175px;
+    height: 130px
+}
+
+.DescripcionColegio{
+    color: #fff;
+    width: 65%;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.DescripcionColegio h2{
+    font-size: 80px;
+
+}
+
+.DescripcionColegio p{
+    font-size: 15px;
+    text-align: justify;
+    padding-right: 20px;
+    transition: font-size .3s ease;
+}
+
+.adaptableTelefono .DescripcionColegio h2{
+    transform: scale(.8);
+
+}
+
+.adaptableTelefono .DescripcionColegio p{
+    transform: scale(.8);
+}
+
+.Button-DescripcionColegio{
+   border: 0;
+   background-image: linear-gradient(
+    150deg,
+    #9500ff,
+    #09f,
+    #00DDFF);
+   width: 30%;
+   height: 50px;
+   border-radius: 8px;
+   color: #fff;
+   display: flex;
+   font-size: 14px;
+   padding: 4px;
+   cursor: pointer;
+   margin-top: 20px;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   min-width: 150px;
+}
+
+.Button-DescripcionColegio span{
+    background: #000;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background .3s ease, font-size .3s ease;
+}
+
+.Button-DescripcionColegio:hover span{
+    background: none;
+    font-size: 15px;
+}
+/*ContenedorColegioIMBPC-----------*/
+
+
+
+
+
+
+
+
+
+/*ContenedorSteveJobs----------------*/
+.Emprendedor-Contenedor{
+    width: 100vw;
+    height: 70vh;
+    background-image: url(../img/FondoSteveJobs.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, .8);
+    padding-left: 20%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    transition: width .3s ease;
+    color: #fff;
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+.ContenedorEmprendedorAdaptable{
+    padding-left: 5%;
+}
+
+.Capa1Emprendedor{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.LogoApple{
+    width: 100%;
+    height: 10%;
+}
+
+.LogoApple img{
+    margin: 0 40px;
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+    opacity: .7;
+}
+
+.Capa1Nombre{
+    display: flex;
+    height: 90%;
+    width: 100%;
+    padding-top: 5%;
+    justify-content: center;
+    align-items:    center;
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgba(120, 120, 120, .3);
+}
+
+.Capa1Nombre p{
+    transform: scaleY(1.5);
+    font-size: 250px;
+    font-weight: 1000;
+    letter-spacing: 13px;
+}
+
+.SteveJobsScalePhone .Capa1Nombre p{
+    font-size: 100px;
+
+}
+
+.Capa2Frases{
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    z-index: 2;
+    display: flexvh;
+    top: 100vh;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left:   20%;
+    transition: all .3s ease;
+}
+
+.ContenedorEmprendedorAdaptable .Capa2Frases{
+    padding-left: 5%;
+}
+
+.Frase1{
+    width: 40%;
+    margin-right: 65px;
+    height: 260px;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 60px 10px 10px;
+    text-align: justify;
+    font-size: 20px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.Frase2{
+    width:  40%;
+    margin-left: 65px;
+    height: 260px;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 60px;
+    text-align: justify;
+    font-size: 20px;
+
+}
+
+.Capa3Foto{
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    z-index: 3;
+    top: 100vh;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left:  20%;
+    transition: all .3s ease;
+}
+
+.ContenedorEmprendedorAdaptable .Capa3Foto {
+    padding-left: 5%;
+}
+
+.Capa3Foto img{
+    width:  55vh;
+    cursor: pointer;
+
+}
+/*ContenedorSteveJobs----------------*/
+
+
+
+
+
+
+
+
+
+/*ContenerdorParaAlumnosClase--------*/
+.ContenedorParaAlumnos{
+    width: 100vw;
+    padding-left:  20%;
+    transition: padding-left .3s ease;
+    background: #fff;
+}
+
+.ContenedorAlumnosAdaptable{
+    padding-left: 5%;
+}
+
+.MargenDeConenedorClases{
+    width: 100%;
+    height: 100%;
+    padding: 35px 5%;
+}
+
+.ContenedorNombreContenedor{
+    width:  100%;
+    padding: 20px 0;
+    border-bottom:  1px solid #61626f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #000;
+}
+
+.ContenedorClasesPorfPec{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: centers;
+}
+
+.ContenedorGlobal{
+    width: 30%;
+    min-width: 200px;
+    display: flex;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    transition:  all .5s ease;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.ContenedorGlobal h3{
+    font-size: 20px;
+    color: #000;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.ContenedorGlobal:hover h3{
+    font-size: 23px;
+}
+
+.CSSBasicos{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.CssImgenBasi{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/FondoBasi.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .5s ease;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.ContenedorGlobal:hover .CssImgenBasi{
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.CssImgenCompu{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/FondoCompu.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .5s ease;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.ContenedorGlobal:hover .CssImgenCompu{
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.CssImgenCientifico{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/FondoCientifico.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .5s ease;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.ContenedorGlobal:hover .CssImgenCientifico{
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.CssImgenDiseño{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/FondoDiseño.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .5s ease;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.ContenedorGlobal:hover .CssImgenDiseño{
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.CssImgenAdinis{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/FondoAdministracion.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .5s ease;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.ContenedorGlobal:hover .CssImgenAdinis{
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, .3);
+}
+/*ContenerdorParaAlumnosClase--------*/
+
+
+
+
+
+
+
+
+
+/*FooterProyectoLupama----------------*/
+.Footer{
+    width: 100vw;
+    padding: 20px 0;
+    background-color: #000;
+    padding-left: 20%;
+    box-shadow: 0 -10px 10px -5px rgba(0, 0, 0, 0.5);
+    transition: all .3s ease;
+}
+
+.FooterAdaptable{
+    padding-left: 5%;
+}
+
+.MarcoFooter{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+.DivisorFoter{
+    width: 100%;
+    height: 1px;
+    background: #303134;
+}
+
+.TituloOptionFoter{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.NameCompani{
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.NameCompani img{
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 0;
+}
+
+.ContactosFoter{
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color:  #fff;
+    font-size:  20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.SeccionesFoter{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.GlobalSection{
+    width: 33.33%;
+    height: 100%;
+    font-size: 16px;
+    color: #807D7C;
+    font-weight: bold;
+    padding: 5px;
+    padding-right: 20px;
+    margin-top: 5px;
+}
+
+.GlobalOption-Section{
+    width:  100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.IconGmail{
+    width: 40px;
+    height: 35px;
+    margin-right: 5px;
+    font-size:  16px;
+}
+
+.TextGmail{
+    color: #807D7C;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    transition: all .5s ease;
+}
+
+.TextGmail:hover{
+    color: #fff;
+    font-size:  16.5px;
+}
+
+.RedesSocialesProfPec{
+    width: 100%;
+    height: 40%;
+}
+
+.RedesSocialesProfPec p{
+    height: 40%;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.DivRedesSocialesPec{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.InstagramIcon{
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.InstagramIcon:hover{
+    transform:  scale(1.1);
+}
+
+.FacebookIcon{
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.FacebookIcon:hover{
+    transform: scale(1.1);
+}
+
+.Copyringt{
+    color: #807D7C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  100%;
+}
+/*FooterProyectoLupama----------------*/
